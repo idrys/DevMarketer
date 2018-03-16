@@ -17,7 +17,7 @@
 //Buefy
 @import 'node_modules/buefy/src/scss/buefy';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
+@import "overrides";  // Przykrywa niektóre istniejące funkcje komponentów
+@import "helpers";    // Tworzy własne komponenty lub funkcje wspomagające komponenty
+@import "styles";
+
