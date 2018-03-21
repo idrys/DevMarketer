@@ -17260,8 +17260,8 @@ label.panel-block:hover {
 }
 
 /* ========================================
-+   ============ Text Overrides ===========
-+   ======================================== */
+   ============ Text Overrides ===========
+   ======================================== */
 
 .is-muted {
   color: #b5b5b5 !important;
@@ -17272,8 +17272,8 @@ a.is-muted:hover {
 }
 
 /* ========================================
-   =========== Dropdown Override ==========
-   ======================================== */
+     =========== Dropdown Override ==========
+     ======================================== */
 
 .dropdown {
   position: relative;
@@ -17843,5 +17843,13 @@ button.nav-item.is-active {
 
 .p-r-100 {
   padding-right: 100px;
+}
+
+.side-menu {
+  position: fixed;
+  height: 100vh;
+  width: 200px;
+  background-color: white;
+  overflow-y: scroll;
 }
 

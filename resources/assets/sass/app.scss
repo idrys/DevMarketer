@@ -8,8 +8,12 @@
 // Bootstrap
 //@import '~bootstrap/scss/bootstrap';
 
+// Variables
+@import "variables";
+
 // Font Awesome
 @import 'node_modules/font-awesome/scss/font-awesome';
+
 
 // Bulma
 @import 'node_modules/bulma/bulma';
@@ -19,5 +23,5 @@
 
 @import "overrides";  // Przykrywa niektóre istniejące funkcje komponentów
 @import "helpers";    // Tworzy własne komponenty lub funkcje wspomagające komponenty
+@import "manage";
 @import "styles";
-
