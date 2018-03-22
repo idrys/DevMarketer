@@ -10,19 +10,22 @@
 
     <title>DevMarketer</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('styles')
 </head>
 <body>
-  
-  @include('_includes.nav.main')
+
+  @include('_includes.nav.main')  
   
   <div id="app" style="background: whitesmoke;"> 
     @yield('content')
   </div>
   
   <!-- Scripts -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

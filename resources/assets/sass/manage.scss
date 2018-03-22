@@ -1,7 +1,22 @@
 .side-menu{
-    position: fixed;
-    height: 100vh;
+    position: absolute;
+    top: 4rem;
+    bottom: 0;
     width: 200px;
     background-color: white;
     overflow-y: scroll;   
 }
+
+.management-area{
+    position: absolute;
+    top: 56px;
+    left: 210px;
+    right: 0;
+    background-color: whitesmoke;
+}
+
+.flex-container {
+    margin: 10px 25px;
+    background-color: whitesmoke;
+}
+

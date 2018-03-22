@@ -9,7 +9,14 @@ Vue.use(Buefy);
 
 
 
-var app = new Vue({
-     el: '#app',
-     data: {}
-});
+//var app = new Vue({
+//     el: '#app',
+//     data: {}
+//});
+
+$(document).ready(function() {
+    //  Dropdowns
+    $('.dropdown').hover(function(e) {
+      $(this).toggleClass('is-open')
+    })
+  })

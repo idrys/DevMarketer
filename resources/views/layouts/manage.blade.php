@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
@@ -11,24 +12,24 @@
     <title>DevMarketer - MANAGEMENT</title>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('styles')
 </head>
 <body>
 
-  <div>
     @include('_includes.nav.main')
-  </div>
-  <div class="t-l-5">
     @include('_includes.nav.manage')
-  </div>
-  <section class="hero is-success is-fullheight"   style="background: whitesmoke;">
-    <div class="management-area" id="app">
-      @yield('content')
-    </div>
-  </section>
 
-  <!-- Scripts -->
-  <script src="{{ asset('js/app.js') }}"></script>
+   
+      <div class="management-area" id="app">
+        @yield('content')
+      </div>
+   
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    @yield('scripts')
 </body>
 </html>

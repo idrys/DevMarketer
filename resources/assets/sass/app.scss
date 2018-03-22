@@ -5,23 +5,24 @@
 // Variables
 @import "variables";
 
-// Bootstrap
-//@import '~bootstrap/scss/bootstrap';
+// Fonts
+// @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 // Variables
 @import "variables";
 
 // Font Awesome
-@import 'node_modules/font-awesome/scss/font-awesome';
-
+@import "node_modules/font-awesome/scss/font-awesome";
 
 // Bulma
-@import 'node_modules/bulma/bulma';
+@import "node_modules/bulma/bulma";
 
-//Buefy
-@import 'node_modules/buefy/src/scss/buefy';
+// Bulma Vue Modules
+@import "node_modules/buefy/src/scss/buefy";
 
-@import "overrides";  // Przykrywa niektóre istniejące funkcje komponentów
-@import "helpers";    // Tworzy własne komponenty lub funkcje wspomagające komponenty
+// Other SCSS Files
+@import "overrides";
+@import "helpers";
 @import "manage";
 @import "styles";

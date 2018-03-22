@@ -2,6 +2,7 @@
 /* ========================================
    ============ Text Overrides ===========
    ======================================== */
+
    .is-muted {
     color: $grey-light !important;
   }
@@ -22,6 +23,7 @@
   
   .dropdown-menu {
     box-shadow: 0 0 8px #777;
+    background-color: white;
     display: none;
     left: 0;
     position: absolute;
@@ -48,7 +50,6 @@
       }
     }
   }
-
   
   .dropdown.is-open .dropdown-menu{
     display: block;
@@ -112,3 +113,4 @@
   .nav {
     height: 4.5rem;
   }
+  
