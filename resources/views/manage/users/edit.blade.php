@@ -9,11 +9,11 @@
     </div>
     <hr class="m-t-0">
 
-    <div class="columns">
-      <div class="column">
-        <form action="{{route('users.update', $user->id)}}" method="POST">
-          {{method_field('PUT')}}
-          {{csrf_field()}}
+    <form action="{{route('users.update', $user->id)}}" method="POST">
+      {{method_field('PUT')}}
+      {{csrf_field()}}
+      <div class="columns">
+        <div class="column">
           <div class="field">
             <label for="name" class="label">Name:</label>
             <p class="control">
@@ -28,40 +28,10 @@
             </p>
           </div>
 
-          <div class="field" >
+          <div class="field">
             <label for="password" class="label">Password</label>
-            <!--b-radio-group v-model="password_options"-->
-            
-            <section>
-              <div class="block">
-                <b-radio v-model="password_options"
-                    native-value="Flint">
-                    Flint
-                </b-radio>
-                <b-radio v-model="password_options"
-                    native-value="Silver">
-                    Silver
-                </b-radio>
-                <b-radio v-model="password_options"
-                    native-value="Jack">
-                    Jack
-                </b-radio>
-                <b-radio v-model="password_options"
-                    native-value="manual">
-                    Vane
-                </b-radio>
-              </div>
-              <p class="content">
-                  <b>Selection:</b>
-                  @{{ password_options }}
-              </p>
-            </section>
-
-
-            <section>
-             <div class="block">
-            
-             <div class="field">
+            <b-radio-group v-model="password_options">
+              <div class="field">
                 <b-radio name="password_options" value="keep">Do Not Change Password</b-radio>
               </div>
               <div class="field">
@@ -73,15 +43,30 @@
                   <input type="text" class="input" name="password" id="password" v-if="password_options == 'manual'" placeholder="Manually give a password to this user">
                 </p>
               </div>
-</div>
-            </section>
-            <!--/b-radio-group-->
+            </b-radio-group>
           </div>
+        </div> <!-- end of .column -->
 
-          <button class="button is-primary">Edit User</button>
-        </form>
+        <div class="column">
+          <label for="roles" class="label">Roles:</label>
+          <input type="hidden" name="roles" :value="rolesSelected" />
+
+          
+            @foreach ($roles as $role)
+              <div class="field">
+                <b-checkbox v-model="rolesSelected" :native-value="{{$role->id}}">{{$role->display_name}}</b-checkbox>
+              </div>
+            @endforeach
+          
+        </div>
       </div>
-    </div>
+      <div class="columns">
+        <div class="column">
+          <hr />
+          <button class="button is-primary is-pulled-right" style="width: 250px;">Save</button>
+        </div>
+      </div>
+    </form>
 
   </div> <!-- end of .flex-container -->
 @endsection
@@ -89,11 +74,14 @@
 
 @section('scripts')
   <script>
+
     var app = new Vue({
       el: '#app',
       data: {
-        password_options: 'keep'
+        password_options: 'keep',
+        rolesSelected: {!! $user->roles->pluck('id') !!}
       }
     });
+
   </script>
 @endsection

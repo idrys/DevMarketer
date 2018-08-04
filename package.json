@@ -21,6 +21,7 @@
     "dependencies": {
         "ajv": "^6.2.1",
         "buefy": "^0.6.4",
-        "font-awesome": "^4.7.0"
+        "font-awesome": "^4.7.0",
+        "npm": "^5.7.1"
     }
 }
