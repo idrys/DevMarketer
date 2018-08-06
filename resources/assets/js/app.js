@@ -7,7 +7,7 @@ import Buefy from 'buefy'
 
 Vue.use(Buefy);
 
-
+require('./manage.js');
 
 //var app = new Vue({
 //     el: '#app',
